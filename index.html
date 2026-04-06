@@ -1,128 +1,336 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="vi" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Luong</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        header {
-            background-color: #4CAF50;
-            color: white;
-            text-align: center;
-            padding: 1rem;
-        }
-        nav {
-            background-color: #333;
-            color: white;
-            padding: 0.5rem;
-            text-align: center;
-        }
-        nav a {
-            color: white;
-            margin: 0 1rem;
-            text-decoration: none;
-        }
-        .container {
-            padding: 2rem;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        .section {
-            background-color: white;
-            margin: 1rem 0;
-            padding: 1.5rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        h2 {
-            color: #4CAF50;
-        }
-        footer {
-            text-align: center;
-            padding: 1rem;
-            background-color: #333;
-            color: white;
-            margin-top: 2rem;
-        }
-        .skills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-        }
-        .skill-tag {
-            background-color: #e0f7e9;
-            color: #2e7d32;
-            padding: 0.5rem 1rem;
-            border-radius: 15px;
-            font-size: 0.9rem;
-        }
-    </style>
+    <title>Luong | Full-Stack Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Portfolio của Luong</h1>
-        <p>Phát triển web &amp; Ứng dụng di động</p>
-    </header>
-    
-    <nav>
-        <a href="#about">Giới thiệu</a>
-        <a href="#skills">Kỹ năng</a>
-        <a href="#projects">Dự án</a>
-        <a href="#contact">Liên hệ</a>
+    <!-- Animated background -->
+    <div class="bg-grid"></div>
+    <div class="bg-glow bg-glow-1"></div>
+    <div class="bg-glow bg-glow-2"></div>
+
+    <!-- Navigation -->
+    <nav class="nav" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <span class="logo-bracket">{</span>luong<span class="logo-bracket">}</span>
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about" class="nav-link">Giới thiệu</a></li>
+                <li><a href="#projects" class="nav-link">Dự án</a></li>
+                <li><a href="#skills" class="nav-link">Kỹ năng</a></li>
+                <li><a href="#contact" class="nav-link">Liên hệ</a></li>
+                <li><a href="tel:+840" class="btn btn-ghost">Liên hệ</a></li>
+            </ul>
+        </div>
     </nav>
-    
-    <div class="container">
-        <section id="about" class="section">
-            <h2>Giới thiệu</h2>
-            <p>Tôi là Luong, một phát triển web và ứng dụng di động đam mê với kinh nghiệm trong việc xây dựng các giải pháp số sáng tạo. Tôi luôn tìm kiếm những thách thức mới để phát triển kỹ năng và đóng góp vào các dự án có ý nghĩa.</p>
-            <p>Đặc biệt tôi quan tâm đến: AI, tự động hoá, và các công nghệ mã nguồn mở.</p>
-        </section>
-        
-        <section id="skills" class="section">
-            <h2>Kỹ năng</h2>
-            <div class="skills">
-                <span class="skill-tag">HTML5</span>
-                <span class="skill-tag">CSS3</span>
-                <span class="skill-tag">JavaScript</span>
-                <span class="skill-tag">Python</span>
-                <span class="skill-tag">Node.js</span>
-                <span class="skill-tag">React</span>
-                <span class="skill-tag">MongoDB</span>
-                <span class="skill-tag">Git</span>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="content">
+            <div class="hero-badge fade-in">
+                <span class="status-dot"></span>
+                Sẵn sàng cho cơ hội mới
             </div>
-        </section>
-        
-        <section id="projects" class="section">
-            <h2>Dự án nổi bật</h2>
-            <div class="project">
-                <h3>Trang web portfolio cá nhân</h3>
-                <p>Một trang web portfolio-responsive showcasing kỹ năng và dự án cá nhân.</p>
-                <p><strong>Công nghệ:</strong> HTML, CSS, JavaScript</p>
+            <h1 class="hero-title slide-in">
+                Xin chào, mình là<br>
+                <span class="gradient-text">Luong</span>
+            </h1>
+            <p class="hero-subtitle fade-in-2">
+                Sinh viên CNTT tại <strong class="text-white">UIT</strong> — Đam mê phát triển web, AI &
+                tự động hoá. Mình biến ý tưởng thành sản phẩm số thực tế.
+            </p>
+            <div class="hero-actions fade-in-3">
+                <a href="#projects" class="btn btn-primary">
+                    Xem dự án
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                </a>
+                <a href="#contact" class="btn btn-secondary">Liên hệ ↗</a>
             </div>
-            <div class="project">
-                <h3>Bot Telegram AI cá nhân</h3>
-                <p>Một bot Telegram được xây dựng bằng OpenClaw để hỗ trợ cá nhân trong công việc hàng ngày.</p>
-                <p><strong>Công nghệ:</strong> Python, OpenClaw, Telegram API</p>
+            <div class="hero-stats fade-in-4">
+                <div class="stat">
+                    <span class="stat-value">2+</span>
+                    <span class="stat-label">Năm kinh nghiệm</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-value">5+</span>
+                    <span class="stat-label">Dự án thực tế</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-value">3+</span>
+                    <span class="stat-label">Ngôn ngữ code</span>
+                </div>
             </div>
-        </section>
-        
-        <section id="contact" class="section">
-            <h2>Liên hệ</h2>
-            <p>Email: luong@example.com</p>
-            <p>GitHub: <a href="https://github.com/Luonghiii" target="_blank">github.com/Luonghiii</a></p>
-            <p>Telegram: @vpsluongbot</p>
-        </section>
-    </div>
-    
-    <footer>
-        <p>&copy; 2026 Luong. Bảo lưu mọi quyền.</p>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+            <span>Cuộn xuống</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="content">
+            <div class="section-header">
+                <span class="section-tag">// Giới thiệu</span>
+                <h2 class="section-title">Về mình</h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-card card">
+                    <div class="card-icon">🎓</div>
+                    <h3>Học vấn</h3>
+                    <p>Công nghệ thông tin — <strong>UIT</strong> (ĐH QG-HCM)</p>
+                    <p class="muted">Lớp DCCNTT18B · 76DCTD26342</p>
+                </div>
+                <div class="about-card card">
+                    <div class="card-icon">💡</div>
+                    <h3>Đam mê</h3>
+                    <p>AI & Machine Learning, Tự động hoá, phát triển web & bot</p>
+                    <p class="muted">Thích thử nghiệm công nghệ mới mỗi ngày</p>
+                </div>
+                <div class="about-card card">
+                    <div class="card-icon">🚀</div>
+                    <h3>Mục tiêu</h3>
+                    <p>Trở thành Full-Stack Developer, làm chủ công cụ AI trong
+                        phát triển phần mềm</p>
+                    <p class="muted">Tập trung vào sản phẩm thực tế, giải quyết
+                        vấn đề thật</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section section-alt" id="projects">
+        <div class="content">
+            <div class="section-header">
+                <span class="section-tag">// Dự án</span>
+                <h2 class="section-title">Works nổi bật</h2>
+            </div>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card card" data-tilt>
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+                            </svg>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Luonghiii/luong-portfolio" target="_blank"
+                                aria-label="Source code">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Portfolio Website</h3>
+                    <p class="project-desc">Trang cá nhân responsive với thiết kế modern dark mode,
+                        tích hợp animation mượt mà và tối ưu performance.</p>
+                    <div class="project-tags">
+                        <span class="tag tag-green">HTML5</span>
+                        <span class="tag tag-blue">CSS3</span>
+                        <span class="tag tag-yellow">JavaScript</span>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="project-card card" data-tilt>
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                            </svg>
+                        </div>
+                        <div class="project-links">
+                            <span class="coming-soon">Sắp ra mắt</span>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Telegram AI Bot</h3>
+                    <p class="project-desc">Bot AI cá nhân dùng OpenClaw + OpenRouter API, hỗ trợ lập
+                        trình, tra cứu thông tin và tự động hoá tin nhắn.</p>
+                    <div class="project-tags">
+                        <span class="tag tag-green">Python</span>
+                        <span class="tag tag-purple">OpenClaw</span>
+                        <span class="tag tag-orange">Telegram API</span>
+                    </div>
+                </div>
+                <!-- Project 3 - Coming soon -->
+                <div class="project-card card project-coming" data-tilt>
+                    <div class="coming-content">
+                        <div class="coming-icon">✨</div>
+                        <h3>Dự án tiếp theo?</h3>
+                        <p>Mình luôn tìm kiếm thử thách mới. Có ý tưởng hợp tác,
+                            hãy liên hệ!</p>
+                        <a href="#contact" class="btn btn-small">Liên hệ ngay →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section" id="skills">
+        <div class="content">
+            <div class="section-header">
+                <span class="section-tag">// Kỹ năng</span>
+                <h2 class="section-title">Tech Stack</h2>
+            </div>
+            <div class="skills-categories">
+                <div class="skill-category">
+                    <h3 class="skill-cat-title">🎨 Frontend</h3>
+                    <div class="skill-grid">
+                        <div class="skill-item">
+                            <span class="skill-icon"><img
+                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                                    alt="HTML5" width="32" height="32"></span>
+                            <span>HTML5</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-icon"><img
+                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                                    alt="CSS3" width="32" height="32"></span>
+                            <span>CSS3</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-icon"><img
+                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                                    alt="JavaScript" width="32" height="32"></span>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-icon"><img
+                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg"
+                                    alt="Tailwind" width="32" height="32"></span>
+                            <span>Tailwind CSS</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3 class="skill-cat-title">⚙️ Backend</h3>
+                    <div class="skill-grid">
+                        <div class="skill-item">
+                            <span class="skill-icon"><img
+                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                                    alt="Python" width="32" height="32"></span>
+                            <span>Python</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-icon"><img
+                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+                                    alt="Node.js" width="32" height="32"></span>
+                            <span>Node.js</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-icon"><img
+                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+                                    alt="Git" width="32" height="32"></span>
+                            <span>Git</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-icon"><img
+                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+                                    alt="GitHub" width="32" height="32"></span>
+                            <span>GitHub</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section section-alt" id="contact">
+        <div class="content">
+            <div class="section-header">
+                <span class="section-tag">// Liên hệ</span>
+                <h2 class="section-title">Kết nối với mình</h2>
+            </div>
+            <div class="contact-grid">
+                <a href="https://github.com/Luonghiii" target="_blank" class="contact-card card">
+                    <div class="contact-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3>GitHub</h3>
+                        <p class="muted">Luonghiii</p>
+                    </div>
+                </a>
+                <a href="https://t.me/luonghiii1" target="_blank" class="contact-card card">
+                    <div class="contact-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path d="M21.198 2.433a2.242 2.242 0 0 0-1.022.215l-8.609 3.45c-2.068.83-4.133 1.664-5.79
+                            2.352-1.72.71-3.06.9-3.37 1.15-.3.25-.57.75-.26 1.47l.01.02.01.02c.23.55.74.78 1.28.94
+                            1.15.34 2.3.68 3.46 1.02.26.08.53.16.78.24.64.19 1.1.54 1.36 1.16.27.62.2 1.34.06
+                            2.02-.07.35-.16.7-.25 1.05-.1.4-.22.84-.16 1.37.06.52.33 1.11.72 1.44.4.34.92.5
+                            1.46.5h.01c.42 0 .93-.13 1.22-.54l2.3-3.2 3.05 2.26c.37.28.8.42 1.23.42.3 0 .6-.07
+                            .88-.22.64-.34 1.11-1.05 1.17-1.83l1.7-10.58c.07-.48-.02-.97-.26-1.4-.25-.43-.62-.74-1.06-.9z"></path>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3>Telegram</h3>
+                        <p class="muted">@luonghiii1</p>
+                    </div>
+                </a>
+                <a href="mailto:luong@example.com" class="contact-card card">
+                    <div class="contact-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <rect x="2" y="4" width="20" height="16" rx="2"/>
+                            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3>Email</h3>
+                        <p class="muted">luong@example.com</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="content">
+            <div class="footer-top">
+                <p class="footer-logo">
+                    <span class="logo-bracket">{</span>luong<span class="logo-bracket">}</span>
+                </p>
+            </div>
+            <div class="footer-bottom">
+                <p class="muted">Designed & built with 💙 by Luong · 2026</p>
+            </div>
+        </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
