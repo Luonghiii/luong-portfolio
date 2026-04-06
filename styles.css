@@ -1,3 +1,112 @@
+/* Additional styles for enhanced portfolio */
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
 }
+
+.container {
+    padding: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.section {
+    background-color: white;
+    margin: 2rem 0;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.section:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+h2 {
+    color: #2e7d32;
+    border-bottom: 2px solid #4CAF50;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.project {
+    background-color: #f8f9fa;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-left: 4px solid #4CAF50;
+    border-radius: 4px;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.skill-tag {
+    background: linear-gradient(135deg, #4CAF50, #45a049);
+    color: white;
+    padding: 0.75rem 1.25rem;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.skill-tag:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+nav a {
+    color: white;
+            margin: 0 1.5rem;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #4CAF50;
+        }
+
+        .contact-info {
+            background-color: #e8f5e8;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+
+        .contact-info a {
+            color: #2e7d32;
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+            
+            .section {
+                padding: 1.5rem;
+                margin: 1rem 0;
+            }
+            
+            nav a {
+                display: block;
+                margin: 0.5rem 0;
+            }
+            
+            .skills {
+                justify-content: center;
+            }
+        }
