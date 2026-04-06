@@ -1,1 +1,128 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Luong</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 0.5rem;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 1rem;
+            text-decoration: none;
+        }
+        .container {
+            padding: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .section {
+            background-color: white;
+            margin: 1rem 0;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #4CAF50;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #333;
+            color: white;
+            margin-top: 2rem;
+        }
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .skill-tag {
+            background-color: #e0f7e9;
+            color: #2e7d32;
+            padding: 0.5rem 1rem;
+            border-radius: 15px;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
 <body>
+    <header>
+        <h1>Portfolio của Luong</h1>
+        <p>Phát triển web &amp; Ứng dụng di động</p>
+    </header>
+    
+    <nav>
+        <a href="#about">Giới thiệu</a>
+        <a href="#skills">Kỹ năng</a>
+        <a href="#projects">Dự án</a>
+        <a href="#contact">Liên hệ</a>
+    </nav>
+    
+    <div class="container">
+        <section id="about" class="section">
+            <h2>Giới thiệu</h2>
+            <p>Tôi là Luong, một phát triển web và ứng dụng di động đam mê với kinh nghiệm trong việc xây dựng các giải pháp số sáng tạo. Tôi luôn tìm kiếm những thách thức mới để phát triển kỹ năng và đóng góp vào các dự án có ý nghĩa.</p>
+            <p>Đặc biệt tôi quan tâm đến: AI, tự động hoá, và các công nghệ mã nguồn mở.</p>
+        </section>
+        
+        <section id="skills" class="section">
+            <h2>Kỹ năng</h2>
+            <div class="skills">
+                <span class="skill-tag">HTML5</span>
+                <span class="skill-tag">CSS3</span>
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">Node.js</span>
+                <span class="skill-tag">React</span>
+                <span class="skill-tag">MongoDB</span>
+                <span class="skill-tag">Git</span>
+            </div>
+        </section>
+        
+        <section id="projects" class="section">
+            <h2>Dự án nổi bật</h2>
+            <div class="project">
+                <h3>Trang web portfolio cá nhân</h3>
+                <p>Một trang web portfolio-responsive showcasing kỹ năng và dự án cá nhân.</p>
+                <p><strong>Công nghệ:</strong> HTML, CSS, JavaScript</p>
+            </div>
+            <div class="project">
+                <h3>Bot Telegram AI cá nhân</h3>
+                <p>Một bot Telegram được xây dựng bằng OpenClaw để hỗ trợ cá nhân trong công việc hàng ngày.</p>
+                <p><strong>Công nghệ:</strong> Python, OpenClaw, Telegram API</p>
+            </div>
+        </section>
+        
+        <section id="contact" class="section">
+            <h2>Liên hệ</h2>
+            <p>Email: luong@example.com</p>
+            <p>GitHub: <a href="https://github.com/Luonghiii" target="_blank">github.com/Luonghiii</a></p>
+            <p>Telegram: @vpsluongbot</p>
+        </section>
+    </div>
+    
+    <footer>
+        <p>&copy; 2026 Luong. Bảo lưu mọi quyền.</p>
+    </footer>
+</body>
+</html>
